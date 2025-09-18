@@ -1,0 +1,378 @@
+/* Regular */
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("./assets/fonts/TTNormsPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("./assets/fonts/TTNormsPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("./assets/fonts/TTNormsPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-family: "TT Norms Pro", Arial, sans-serif;
+}
+
+/* Navigation */
+.navbar {
+  background: #ff7171;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+}
+
+.nav-menu a {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Georgia", sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.hamburger {
+  display: flex;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 28px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(105deg, #fff3b0 14%, #ffb6c1 66%, #ffb6c1 100%);
+  display: flex;
+  align-items: center;
+  padding-top: 3.3rem;
+  overflow: hidden;
+}
+
+.hero-container {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 7rem;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+}
+
+.hero-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #191919;
+  margin-bottom: 3rem;
+  letter-spacing: 7px;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.cta-button {
+  background: #ff7171;
+  color: white;
+  padding: 0.6rem 2rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  max-width: 200px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.4rem;
+}
+
+.cta-button:hover {
+  background: #ff5252;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Gallery Section */
+.gallery {
+  background: linear-gradient(81deg, #fff3b0 14%, #ffb6c1 66%, #ffb3ef 100%);
+  padding: 4rem 2rem;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 200px;
+  column-gap: 1.5rem;
+  row-gap: 0.7rem;
+}
+
+.gallery-item:nth-child(2) {
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-content {
+  background: #ff6b6b;
+  padding: 1.4rem 1.8rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.gallery-content h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  color: #000000;
+  letter-spacing: 0.1px;
+}
+
+.gallery-content h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000000;
+  letter-spacing: 5px;
+  line-height: 48px;
+}
+
+.gallery-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.gallery-cta img {
+  height: 22px;
+}
+
+/* Responsive */
+@media (max-width: 1286px) {
+  .hero-container {
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 1052px) {
+  .nav-container {
+    gap: 2rem;
+  }
+  .nav-menu {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .nav-container {
+    gap: 1rem;
+  }
+  .nav-menu {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 50px;
+    flex-direction: column;
+    background: #ff6b6b;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-container {
+    justify-content: flex-end;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  .hero-image {
+    height: 300px;
+    order: -1;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    row-gap: 1rem;
+  }
+
+  .gallery-item:nth-child(2) {
+    grid-row: auto;
+  }
+
+  .gallery-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .gallery-content h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image {
+    order: 2;
+    width: 100%;
+    margin-top: 1.2rem;
+    height: auto;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+  }
+
+  .gallery-content h3 {
+    font-size: 2.4rem;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 312px) {
+  .gallery-content h3 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}

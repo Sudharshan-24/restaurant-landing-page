@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simplotel Restaurant</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#food">Food</a></li>
+        <li><a href="#restaurant">Restaurant</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <img src="./assets/images/menu-bar.png" alt="">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>LOREM IPSUM</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id
+          est vitae dolor rhoncus tristique. Maecenas metus quam, rhoncus
+          euismod lorem in, sollicitudin viverra eros. Donec dictum luctus
+          quam ut tristique. Curabitur nec faucibus purus. Quisque congue sem
+          nec justo mollis, in tincidunt erat pretium. Sed pulvinar, massa ac
+          porta viverra.
+        </p>
+        <a href="#order" class="cta-button">Click Me</a>
+      </div>
+      <div class="hero-image">
+        <img src="./assets/images/pexels-robin-stickel-70497.jpg" alt="Delicious gourmet burger with fries" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="gallery-container">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="./assets/images/pexels-rachel-claire-6752433.jpg" alt="Restaurant exterior with neon signs" />
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/pexels-mister-mister-3434523.jpg" alt="Beautifully plated gourmet dishes" />
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/images/pexels-eva-bronzini-6141651.jpg" alt="Chef preparing food in kitchen" />
+        </div>
+      </div>
+      <div class="gallery-content">
+        <h2>LOREM IPSUM</h2>
+        <h3>LOREM IPSUM SET ADEMIR</h3>
+        <div class="gallery-cta">
+          <span>Click</span>
+          <img src="./assets/images/icons8-arrow-30.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+
+</html>
